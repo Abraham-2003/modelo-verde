@@ -79,9 +79,9 @@ const datos = reactive({
 
 const marcas = ['Toyota', 'Nissan', 'Chevrolet', 'Ford']
 const tecnicos = [
-  { clave: '001', nombre: 'Carlos' },
-  { clave: '002', nombre: 'Andrea' },
-  { clave: '003', nombre: 'Marcos' }
+  { clave: '001', nombre: '17452' },
+  { clave: '002', nombre: '17586' },
+  { clave: '003', nombre: '17945' }
 ]
 function clasificarPlaca(p) {
   const upper = p.toUpperCase()
@@ -102,12 +102,12 @@ function llenarDatosDesdeNota() {
     datos.placaTicket = 'ABC1234'
     datos.combustible = 'Gasolina'
 
-    if (datos.placa !== datos.placaTicket) {
-      Swal.fire({
-        icon: 'warning',
-        title: 'Placa no coincide',
-        text: `La placa registrada (${datos.placa}) no coincide con la del ticket (${datos.placaTicket}).`
-      })
+    if (placa.value !== datos.placaTicket) {
+  Swal.fire({
+    icon: 'warning',
+    title: 'Placa no coincide',
+    text: `La placa registrada (${placa.value}) no coincide con la del ticket (${datos.placaTicket}).`
+  })
     }
   }
 }
@@ -129,7 +129,7 @@ function confirmarGuardar() {
   Swal.fire({
     icon: 'question',
     title: '¿Confirmar registro?',
-    html: `Placa: <strong>${datos.placa}</strong><br>Holograma: <strong>${datos.holograma}</strong>`,
+    html: `Placa: <strong>(${placa.value})</strong><br>Holograma: <strong>${datos.holograma}</strong>`,
     showCancelButton: true,
     confirmButtonText: 'Guardar',
     cancelButtonText: 'Cancelar'

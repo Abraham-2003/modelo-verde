@@ -94,25 +94,42 @@ const rutasPorRol = {
   }
 ],
   caja: [
-    {
-      texto: 'Finanzas',
-      subitems: ['Cobros', 'Pagos', 'Resumen mensual']
-    },
-    {
-      texto: 'Historial',
-      subitems: ['Facturas', 'Transacciones', 'Clientes frecuentes']
-    }
-  ],
+  {
+    texto: 'Finanzas',
+    subitems: ['Cobros', 'Pagos', 'Resumen mensual', 'Arqueo de caja', 'Transferencias internas']
+  },
+  {
+    texto: 'Historial',
+    subitems: ['Facturas', 'Transacciones', 'Clientes frecuentes', 'Descuentos aplicados']
+  },
+  {
+    texto: 'Reportes',
+    subitems: ['Ingresos por día', 'Comparativa mensual', 'Alertas por irregularidad']
+  },
+  {
+    texto: 'Configuración',
+    subitems: ['Tipos de cobro', 'Usuarios de caja', 'Restricciones de horario']
+  }
+],
   impresion: [
-    {
-      texto: 'Hologramas',
-      subitems: ['Carga manual', 'Reimpresión', 'Validaciones']
-    },
-    {
-      texto: 'Soporte',
-      subitems: ['Preguntas frecuentes', 'Técnico', 'Sistema']
-    }
-  ]
+  {
+    texto: 'Hologramas',
+    subitems: ['Carga manual', 'Reimpresión', 'Validaciones', 'Historial de impresión']
+  },
+  {
+    texto: 'Soporte',
+    subitems: ['Preguntas frecuentes', 'Técnico', 'Sistema', 'Guía rápida', 'Reportes']
+  },
+  {
+    texto: 'Documentación',
+    subitems: ['Manual de usuario', 'Políticas de impresión', 'Formatos oficiales']
+  },
+  {
+    texto: 'Estadísticas',
+    subitems: ['Por técnico', 'Por tipo de holograma', 'Totales diarios']
+  }
+]
+
 }
 
 const itemsRol = computed(() => rutasPorRol[rol.value] ?? [])

@@ -105,7 +105,15 @@ const notas = ref([
   { numero: 1001, placa: 'ABC-123', tipo: 'Particular', combustible: 'gasolina', fecha: '02/08/2025' },
   { numero: 1002, placa: '12XYZ78', tipo: 'Discapacidad', combustible: 'diesel', fecha: '02/08/2025' },
   { numero: 1003, placa: 'XY1234', tipo: 'Carga', combustible: 'hibrido', fecha: '01/08/2025' },
+  { numero: 1004, placa: 'JHK-876', tipo: 'Motocicleta', combustible: 'gasolina', fecha: '03/08/2025' },
+  { numero: 1005, placa: 'ZZ9999', tipo: 'Transporte público', combustible: 'gas', fecha: '03/08/2025' },
+  { numero: 1006, placa: 'MNO-456', tipo: 'Particular', combustible: 'electricidad', fecha: '01/08/2025' },
+  { numero: 1007, placa: 'AAA-111', tipo: 'Carga', combustible: 'diesel', fecha: '02/08/2025' },
+  { numero: 1008, placa: 'BCD-222', tipo: 'Discapacidad', combustible: 'hibrido', fecha: '03/08/2025' },
+  { numero: 1009, placa: 'EFG-333', tipo: 'Motocicleta', combustible: 'gasolina', fecha: '03/08/2025' },
+  { numero: 1010, placa: 'HIJ-444', tipo: 'Particular', combustible: 'diesel', fecha: '01/08/2025' }
 ])
+
 
 const notasFiltradas = computed(() =>
   busqueda.value ? notas.value.filter(n => n.placa.toLowerCase().includes(busqueda.value.toLowerCase())) : notas.value
